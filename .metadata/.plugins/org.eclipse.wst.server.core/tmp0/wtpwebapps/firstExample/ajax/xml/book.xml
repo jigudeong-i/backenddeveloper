@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<bookInfo>
+		<title>어린왕자</title>
+		<price>8,900원</price>
+		<author>생택쥐페리</author>
+	</bookInfo>
+	<bookInfo>
+		<title>달나라 여행</title>
+		<price>9,000원</price>
+		<author>나이라</author>
+	</bookInfo>
+	<bookInfo>
+		<title>존 메이어</title>
+		<price>1,000원</price>
+		<author>고리페링</author>
+	</bookInfo>
+</books>

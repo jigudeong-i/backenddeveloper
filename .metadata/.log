@@ -1,0 +1,510 @@
+!SESSION 2025-07-17 11:26:51.857 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-17 11:26:53.685
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-17 11:27:10.815
+!MESSAGE Logback config file: C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-07-17 11:27:15.272
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2025-07-17 11:29:16.712
+!MESSAGE Connection to https://www.caucho.com/eclipse/site.xml failed on 호스트 이름을 확인하는 동안 로컬 서버가 신뢰할 만한 서버에서 응답을 받지 못해 발생한 일시적인 오류입니다 (www.caucho.com). Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: 호스트 이름을 확인하는 동안 로컬 서버가 신뢰할 만한 서버에서 응답을 받지 못해 발생한 일시적인 오류입니다 (www.caucho.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:61)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:169)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2025-07-17 11:29:16.919
+!MESSAGE Connection to https://www.caucho.com/eclipse/p2.index failed on www.caucho.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: www.caucho.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:61)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:169)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-17 12:47:58.179
+!MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-17 12:47:58.694
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.6.3 from path "C:\backenddeveloper\util\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.4.202411181846\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-17 12:47:58.712
+!MESSAGE [Info]	Typescript Server version info: {version=5.6.3, source=user-setting}
+
+!ENTRY org.eclipse.wst.server.core 4 0 2025-07-17 14:20:19.004
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-17 14:37:20.598
+!MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-17 16:45:52.464
+!MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-17 16:45:52.582
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.6.3 from path "C:\backenddeveloper\util\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.4.202411181846\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-17 16:45:52.585
+!MESSAGE [Info]	Typescript Server version info: {version=5.6.3, source=user-setting}
+!SESSION 2025-07-21 09:04:04.999 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 09:04:08.205
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 09:04:44.476
+!MESSAGE Logback config file: C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-07-21 09:04:50.831
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:16:32.445
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:16:32.445
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:16:32.446
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:16:32.446
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:16:32.453
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:16:32.457
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:19:42.868
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:19:42.869
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:19:42.869
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:19:42.870
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:19:42.874
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-07-21 09:19:42.877
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 10:15:49.221
+!MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 10:15:49.821
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.6.3 from path "C:\backenddeveloper\util\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.4.202411181846\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 10:15:49.826
+!MESSAGE [Info]	Typescript Server version info: {version=5.6.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 11:40:01.411
+!MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 11:40:01.454
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.6.3 from path "C:\backenddeveloper\util\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.4.202411181846\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 11:40:01.457
+!MESSAGE [Info]	Typescript Server version info: {version=5.6.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 11:40:01.458
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajax/json/05.json
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 11:40:42.252
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajax/json/05.json
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 11:40:42.257
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajax/json/05.json
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 11:40:43.125
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajax/json/05.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 15:06:34.827
+!MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 15:06:34.869
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.6.3 from path "C:\backenddeveloper\util\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.4.202411181846\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 15:06:34.871
+!MESSAGE [Info]	Typescript Server version info: {version=5.6.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:06:34.872
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:06:38.730
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:06:40.819
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:06:42.983
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:06:56.898
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:07:05.000
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:07:06.072
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:07:06.075
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:07:07.066
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:07:07.069
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:07:08.332
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/html/kakaomap.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:34:56.478
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajax/json/krc_data.json
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:35:00.326
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajax/json/krc_data.json
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 15:43:29.082
+!MESSAGE [Info]	ESLint server running in node v22.11.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 15:43:29.125
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.6.3 from path "C:\backenddeveloper\util\eclipse\plugins\org.eclipse.wildwebdeveloper_1.2.4.202411181846\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2025-07-21 15:43:29.127
+!MESSAGE [Info]	Typescript Server version info: {version=5.6.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:43:29.128
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:43:51.566
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:45:59.497
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:45:59.502
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:45:59.505
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:46:01.316
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:46:01.320
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:46:03.064
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:46:03.067
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:46:04.428
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:46:04.434
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:46:05.976
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 15:46:05.980
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:18:35.007
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:18:35.011
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:22.760
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:22.763
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:22.766
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:22.768
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:22.771
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:22.774
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:24.138
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:24.141
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:24.143
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:24.146
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:24.149
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:24.151
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:25.098
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:25.102
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:25.106
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:25.109
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:25.112
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:25.115
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:25.118
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:28.025
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:28.028
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:28.031
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:28.034
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:28.037
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:30.187
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:32.404
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:32.409
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:32.414
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:32.418
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:32.421
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:32.424
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-07-21 16:41:32.427
+!MESSAGE [Error]	Unexpected resource file:///C:/backenddeveloper/JSPCoding/firstExample/src/main/webapp/ajaxExample/krc_data.html
+!SESSION 2025-07-21 17:53:43.149 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 17:53:44.949
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 17:53:47.887
+!MESSAGE Logback config file: C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-07-21 17:53:52.223
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-07-21 18:56:37.224 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 18:56:40.010
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 18:56:43.357
+!MESSAGE Logback config file: C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-07-21 18:56:48.048
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-07-21 19:54:03.304 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 19:54:05.329
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 19:54:09.481
+!MESSAGE Logback config file: C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-07-21 19:54:14.871
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-07-21 20:24:47.565 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 20:24:49.921
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-21 20:24:53.788
+!MESSAGE Logback config file: C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-07-21 20:24:58.602
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-07-22 08:06:34.825 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-22 08:06:37.234
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-22 08:06:40.889
+!MESSAGE Logback config file: C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-07-22 08:06:46.071
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-07-22 08:08:42.758 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-22 08:08:45.365
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-07-22 08:08:47.850
+!MESSAGE Logback config file: C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-07-22 08:08:52.423
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

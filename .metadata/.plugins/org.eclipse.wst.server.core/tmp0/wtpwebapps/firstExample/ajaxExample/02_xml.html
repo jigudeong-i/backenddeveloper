@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>xml(1) - 02_xml.html</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-icon" />
+
+		<link rel="stylesheet" href="../css/reset.css"/>
+		<link rel="stylesheet" href="../css/common.css"/>
+	</head>
+	<body>
+		<h1 class="title">$.ajax() 함수를 사용한 XML데이터 읽기 (1)</h1>
+		<div class="exec">
+			<input type="button" value="xml데이터 가져오기" id="mybtn" />
+		</div>
+		<div class="console" id="result"></div>
+		
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script>
+			$("#mybtn").on("click", function() {
+				$.ajax({
+					url: "/firstExample/ajax/xml/02.xml",
+					method: 'get',
+					dataType: 'xml'
+				}).done(function (data) {
+					// 읽어온 XML파일안에 포함된 데이터를 추출
+					let title = $(data).find("title").text();
+					let time = $(data).find("time").text();
+					let teacher = $(data).find("teacher").text();
+					
+					// 추출된 데이터를 화면에 출력하기 위한 HTML요소를 동적으로 생성
+					let div = $("<div>"); //$("div");
+					let p1 = $("<p>").html(title);
+					let p2 = $("<p>").html(time);
+					let p3 = $("<p>").html(teacher);
+					
+					// 메서드 체인을 사용한 동적 요소의 결합. <div><p></p><p></p><p></p></div>
+					div.append(p1).append(p2).append(p3);
+					
+					// 화면에 표시
+					$("#result").html(div);
+				}).fail(function(xhr, textStatus) {
+					 //통신이 실패했을 때 실행되는 함수.
+					$("#result").html(textStatus + " (HTTP-" + xhr.status + ")");
+				});
+			});
+		</script>
+	</body>
+</html>

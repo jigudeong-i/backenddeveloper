@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>json(1) - 04_json.html</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-icon" />
+
+		<link rel="stylesheet" href="../css/reset.css"/>
+		<link rel="stylesheet" href="../css/common.css"/>
+	</head>
+	<body>
+		<h1 class="title">$.ajax() 함수를 사용한 JSON데이터 읽기 (1)</h1>
+		<div class="exec">
+			<input type="button" value="JSON데이터 가져오기" id="mybtn" />
+		</div>
+		<div class="console" id="result"></div>
+		
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script>
+			$("#mybtn").on("click", function() {
+				$.ajax({
+					url: '/firstExample/ajax/json/04.json', 
+					method: 'get',
+					dataType: 'json'
+				}).done(function (json) {        // 매개변수명.
+					// 파라미터로 전달되는 객체는 JSON 자체이다. 그래서 계층구조로 접근
+					let title = json.school.subject.title;  
+					let time = json.school.subject.time;
+					let teacher = json.school.subject.teacher;
+					
+					/** 요소의 동적 생성 및 데이터 출력 구현 */
+					let ul = $("<ul>");
+					let li1 = $("<li>").html(title);
+					let li2 = $("<li>").html(time);
+					let li3 = $("<li>").html(teacher);
+					
+					let data = ul.append(li1).append(li2).append(li3);
+					$("#result").html(data);
+				}).fail(function(xhr, textStatus) {
+					 //통신이 실패했을 때 실행되는 함수.
+					$("#result").html(textStatus + " (HTTP-" + xhr.status + ")");
+				});
+			});	
+		</script>
+		
+	</body>
+</html>

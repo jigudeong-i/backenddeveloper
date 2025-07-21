@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Insert title here</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-icon" />
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" /> <!-- bootstrap 온라인css파일(들어가볼것). href 뒤엔 파일이 온다 -->
+		<style>
+			#item-template{
+				display: none;      
+			}			/* <div id=List> 애들을 다 감추기 위해. (한번 지우고 출력해볼 것) */  
+			#map{
+				height: 500px;
+			}			/* 넓이는 몰라도 높이는 꼭 줘야한다! */ 
+		</style>
+	</head>
+	<body>
+		<h3 class="text-center mb-2">한국농어촌공사에서 제공하는 계절 테마여행 세부 코스정보</h3>
+		
+		
+		<!-- 지도 -->
+		<div class="container mb-3">
+			<div class="p-5 text-center bg-body-tertiary rounded-3">
+				<div id="map"></div>
+			</div>
+		</div>
+		
+		<!-- 관광소 -->
+		<div class="container">            <!-- bootstrap css에 템플릿을 다 만들어놧기에 클래스 이름만 따오면 된다. -->
+			<div id="list" class="row row-cols-1 row-cols-md-3 g-4">
+				<div id="item-template" class="col">
+					<div class="card">
+						<img class="card-img-top">
+						<div class="card-body">
+							<p class="card-text"></p>     			<!-- 장소 설명  -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=65ca8ae0356565c63815f909008418e1"></script> 		
+		<script>
+		const template = function(no, destinationName, photoFile, lat, lng, address){   //json으로부터 데이터 가져온다.
+			let $div = $('#list'); 
+			 
+			let $element = $('#item-template').clone().removeAttr('id');  // 복사하겠는데 그중 id는 없애겠다. (id는 유일요소); 
+		    $element.find('.card-img-top').attr({       //attr: 속성추가 메서드 
+		    	"src": photoFile,	 // 사진 
+		    	"data-lat" : lat,	// (latitude)위도 
+		    	"data-lng" : lng	// (longitude)경도
+		    });
+		    
+		    $element.find('.card-title').html(destinationName);    // 이건 뭐지? 
+		    $element.find('.card-text').html(address);
+
+		    $div.append($element); 
+		}
+		
+		function initMap(lat, lng){		//위도, 경도 
+			const container = document.getElementById('map');     //map에 출력 
+			
+			const options = {
+				center: new kakao.maps.LatLng(lat, lng),
+			    level: 5
+			};
+			
+			const map = new kakao.maps.Map(container, options);
+			
+			let mapTypeControl = new kakao.maps.MapTypeControl();
+			map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+			let zoomControl = new kakao.maps.ZoomControl();   //확대기능 넣을거냐
+			map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+			    
+			let marker = new kakao.maps.Marker({     //누르면 정확한 위치를 마커표시할거냐 
+			    position: map.getCenter()
+			});
+			marker.setMap(map);
+		}
+		
+		$.ajax({
+			url: '/firstExample/ajax/json/krc_data.json', 
+			method: 'get',
+			dataType: 'json'
+		}).done(function (json) {
+			$(json).each(function(index) { 
+				if(index <= 21) {
+					let no = this.no;
+					let destinationName = this.destinationName;
+					let photoFile = this.photoFile;
+					let lat = this.latitude;               // 위도
+					let lng = this.longitude;              // 경도
+					let address = this.address;
+					
+					template(no, destinationName, photoFile, lat, lng, address);
+				}
+			}); 
+
+		}).fail(function(xhr, textStatus) {
+			alert(textStatus + " (HTTP-" + xhr.status + ")");
+		});
+		
+		$(document).on("click", ".card-img-top", function(){
+			let lat = $(this).data("lat");
+			let lng = $(this).data("lng");
+			console.log(lat, lng);
+			initMap(lat, lng);
+		});
+		</script>
+	</body>
+</html>

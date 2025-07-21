@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>xml(2) - 03_xml.html</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-con" />
+		
+		<link rel="stylesheet" href="../css/reset.css"/>
+		<link rel="stylesheet" href="../css/common.css"/>
+	</head>
+	<body>
+		<h1 class="title">$.ajax() 함수를 사용한 XML데이터 읽기 (2)</h1>
+		<div class="exec">
+			<input type="button" value="xml데이터 가져오기" id="mybtn" />
+		</div>
+		<div class="console" id="result"></div>
+		
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script>
+			$("#mybtn").on("click", function(){
+				$.ajax({
+					url: '/firstExample/ajax/xml/03.xml',
+					method: 'get',
+					dataType: 'xml'
+				}).done(function (data){
+					$("#result").html("");
+					// 반복되는 태그 단위를 찾아서 each() 함수 사용
+					$(data).find("subject").each(function(){
+						// 각 개별 요소에 속해 있는 텍스트 데이터 추출
+						let title = $(this).find("title").text();		
+						let time = $(this).find("time").text();
+						let teacher = $(this).find("teacher").text(); 
+						
+						// 출력읠 위한 동적 요소의 생성
+						let div = $("<div>");
+						let p1 = $("<p>").html(title);
+						let p2 = $("<p>").html(time);
+						let p3 = $("<p>").html(teacher);
+						
+						// 조립과 출력
+						div.append(p1).append(p2).append(p3);
+						// 반드시 body 태그 하위에 정적 요소에 추가 작업 설정.
+						$("#reault").append(div);
+						$("#result").append("<hr />");
+					});
+				}).failt(function(xhr, textStatus){
+					// 통신이 실패했을 때 실행되는 함수.
+					$("#result").html(textStatus + " (HTTP-" + xhr.status + ")");
+				});
+			});
+		</script>
+	</body>
+</html>

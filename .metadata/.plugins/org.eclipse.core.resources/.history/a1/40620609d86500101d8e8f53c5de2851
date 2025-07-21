@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>book introduce</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-con" />
+		
+		<link rel="stylesheet" href="../css/common.css"/>
+	</head>
+	<body>
+		<h1 class="title">책을 소개합니다.</h1>
+		<div class="console" id="result"></div>
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script>
+			/*$.ajax({
+				url: '/firstExample/ajax/xml/book.xml',
+				method: 'get',
+				dataType: 'xml'
+			}).done(function(data){     // 매개변수? 
+				$("#result").html("");
+				$(data).find("bookInfo").each(function(){
+					
+					console.log($(this).index());
+					
+					let title= $(this).find("title").text();
+					let price= $(this).find("price").text();
+					let author= $(this).find("author").text();
+					
+					let div= $("<div>");
+					let p1= $("<p>").html(title);
+					let p2= $("<p>").html(price);
+					let p3= $("<p>").html(author);
+					
+					div.append(p1).append(p2).append(p3);
+					$("#result").append(div);
+					$("#result").append("<hr />");
+				});
+			}).fail(function(xhr, textStatus){
+				$("#result").html(textStatus + " (HTTP-" + xhr.status + ")");
+			});*/
+			
+			
+			
+			$.get('/firstExample/ajax/xml/book.xml'), function(data){
+				$(data).finc('book').each(function(){
+					let title= $(this).find("title").text();
+					let price= $(this).find("author").text();
+					let author = $(this).find("price").text();
+					
+					let txt = $("<li>").html(title + ", " + author + ", " + price)
+					$('#view').append(txt);
+				});
+			}).fail(function(xhr, textStatus){
+				$("#result").html(textStatus + " (HTTP-" + xhr.status + ")");
+			});
+			
+			
+		</script>
+	</body>
+</html>

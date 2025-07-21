@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>book introduce</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-con" />
+		
+		<link rel="stylesheet" href="../css/common.css"/>
+	</head>
+	<body>
+		<h1 class="title">책을 소개합니다.</h1>
+		<!-- <div class="console" id="result"></div> -->
+		<div class="console" id="result">
+			<ul id="view"></ul>
+		</div>
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script>
+			/*$.ajax({
+				url: '/firstExample/ajax/xml/book.xml',
+				method: 'get',
+				dataType: 'xml'
+			}).done(function(data){     // 매개변수? 
+				$("#result").html("");
+				$(data).find("bookInfo").each(function(){
+					console.log($(this).index());
+					
+					let title= $(this).find("title").text();
+					let price= $(this).find("price").text();
+					let author= $(this).find("author").text();
+					
+					let div= $("<div>");
+					let p1= $("<p>").html(title);
+					let p2= $("<p>").html(price);
+					let p3= $("<p>").html(author);
+					
+					div.append(p1).append(p2).append(p3);
+					$("#result").append(div);
+					$("#result").append("<hr />");
+				});
+			}).fail(function(xhr, textStatus){
+				$("#result").html(textStatus + " (HTTP-" + xhr.status + ")");
+			});*/
+			
+			/* get() 함수로 접근 
+			   $.get(요청할 url, 요청시 전달할 파라미터, 콜백함수) <-정상적으로 호출 시 호출함수
+			   .fail(콜백함수)<- 실패시 호출 함수
+			   같은 서버에 위치하고 있는 데이터를 요청하기 때문에 ../ajax/xml/book.xml 가능하다. 
+			   하지만 다른 위치에서 접근시 경로가 달라져야 하기 때문에 uri 요청을 권장한다 */
+			   
+			$.get('/firstExample/ajax/xml/book.xml', function(data){
+				$(data).find('bookInfo').each(function(){
+					let title= $(this).find("title").text();
+					let price= $(this).find("author").text();
+					let author = $(this).find("price").text();
+					
+					let txt = $("<li>").html(title + ", " + author + ", " + price);
+					$('#view').append(txt);
+				});
+			}).fail(function(xhr, status){
+				$("#result").html("오류가 발생했습니다.<br />").append("상태: " + status);
+			});
+		</script>
+	</body>
+</html>

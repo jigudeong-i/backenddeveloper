@@ -1,0 +1,38 @@
+[
+  {
+    "no": 1,
+    "destinationName": "선운사",
+    "photoFile": "https://www.welchon.com/upload/seasontheme/course/2025/04/72e89d1d-933d-4b55-b274-fc2f36ca2353.png",
+    "latitude": 35.49769882,
+    "longitude": 126.5795167,
+    "address": "전북특별자치도 고창군 아산면 선운사로 250",
+    "description": ""
+  },
+  {
+    "no": 2,
+    "destinationName": "책마을해리",
+    "photoFile": "https://www.welchon.com/upload/seasontheme/course/2025/04/e16e2d12-3e6f-4544-ba23-160078ff3954.png",
+    "latitude": 35.47004804,
+    "longitude": 126.4832768,
+    "address": "전북특별자치도 고창군 해리면 월봉성산길 88",
+    "description": ""
+  },
+  {
+    "no": 3,
+    "destinationName": "고창청보리밭축제",
+    "photoFile": "https://www.welchon.com/upload/seasontheme/course/2025/04/a838c4e7-6e5e-4a0a-82a5-b05fe560dbb6.png",
+    "latitude": 35.37534821,
+    "longitude": 126.5429077,
+    "address": "전북특별자치도 고창군 공음면 학원농장길 154",
+    "description": ""
+  },
+  {
+    "no": 4,
+    "destinationName": "명동게장",
+    "photoFile": "https://www.welchon.com/upload/seasontheme/course/2025/04/adb6e4bf-ec80-4e41-a8ef-27bdf78f00b8.jpg",
+    "latitude": 34.7329194,
+    "longitude": 127.7219246,
+    "address": "전남 여수시 봉산남4길 23-26 (봉산동)",
+    "description": ""
+  }
+]
