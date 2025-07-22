@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Insert title here</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-icon" />
+	
+		<style>
+			a > img{
+				width: 200px; height: 200px;
+				border: 1px solid #000;
+				border-radius:3px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>링크로 서블릿 요청하기</h1>
+		<!-- ? 쿼리스트링으로 서버에 전달할 값을 명시할 수 있다. 
+		이때 전송할 형식: 이름=값. 여러 데이터를 전송 시: 이름=값&이름2=값2 -->
+		<a href="/servletExample/queryget?guestName=둘리&num=101"> <!-- 이미지는 둘리, 숫자는 101 -->
+			<img src="../image/image_1.jpg" /></a>
+		<a href="/servletExample/queryget?guestName=또치&num=202">
+			<img src="/servletExample/image/image_2.png" /></a>
+		<hr />
+
+		<h1>이름과 좋아하는 숫자 전달하기(GET 방식)</h1>
+		<form method="get" action="/servletExample/queryget">  <!-- 액션으로 전달하고자 한다. -->
+			<input type="text" name="guestName" placeholder="이름을 입력하세요" required><br /> <!-- 서버로 보내려면 id가 아닌 name을 써야한다 -->
+			<input type="number" name="num" min="0" placeholder="좋아하는 숫자를 입력하세요" required><br />
+			<input type="submit" value="요청(GET)">
+		</form>
+		<br />
+		<hr />
+		
+		<h1>이름과 좋아하는 숫자 전달하기(POST 방식)</h1>
+		<form method="post" action="/servletExample/querypost">
+			<input type="text" name="guestName" placeholder="이름을 입력하세요" required><br />   
+			<input type="number" name="num" min="0" placeholder="좋아하는 숫자를 입력하세요" required><br/>
+			<input type="submit" value="요청(POST)">
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

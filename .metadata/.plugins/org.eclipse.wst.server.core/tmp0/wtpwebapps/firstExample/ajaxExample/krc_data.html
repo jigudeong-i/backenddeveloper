@@ -41,14 +41,14 @@
 			</div>
 		</div>
 
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
 		<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=65ca8ae0356565c63815f909008418e1"></script> 		
 		<script>
-		const template = function(no, destinationName, photoFile, lat, lng, address){   //json으로부터 데이터 가져온다.
-			let $div = $('#list'); 
+		const template = function(no, destinationName, photoFile, lat, lng, address){   // json으로부터 데이터 가져온다.
+			let $div = $('#list');
 			 
-			let $element = $('#item-template').clone().removeAttr('id');  // 복사하겠는데 그중 id는 없애겠다. (id는 유일요소); 
-		    $element.find('.card-img-top').attr({       //attr: 속성추가 메서드 
+			let $element = $('#item-template').clone().removeAttr('id');  // 복사하겠는데 그중 id는 없애겠다.(id는 유일요소); 
+		    $element.find('.card-img-top').attr({       // attr: 속성추가 메서드 
 		    	"src": photoFile,	// 사진 
 		    	"data-lat" : lat,	// (latitude)위도 
 		    	"data-lng" : lng	// (longitude)경도

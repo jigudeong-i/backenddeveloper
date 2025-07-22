@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Insert title here</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-icon" />
+		<style>
+			button[type="button"]{
+				width:67px;
+				margin-top:5px;
+			}
+		</style>
+	</head>
+	<body>
+		<p> [코딩시 요구사항]<br />
+		lunch.html --> 요청 url: /servletExample/todayMenu<br />
+		method : post방식 / 입력양식의 이름 : from, lunch <br />
+		서블릿 name : TodayMenu 생성</p>
+		
+		<h3>오늘 점심은 뭐 먹을까? (2개이상 선택)</h3>
+		<!-- <form id="form" method="post" action="/servletExample/todayMenu" -->
+		<form name="form" id="form">
+			<select name="lunch" size="4" multiple>
+				<option value="떡볶이">떡볶이</option>
+				<option value="버섯덮밥">버섯덮밥</option>
+				<option value="칼국수">칼국수</option>
+				<option value="비빔밥">비빔밥</option>
+				<option value="야채김밥">야채김밥</option>
+				<option value="햄버거">햄버거</option>
+			</select><br />
+			<button type="button" id="submitBtn">전송</button>
+		</form>
+		
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script src="../js/lunch.js"></script>
+	</body>
+</html>

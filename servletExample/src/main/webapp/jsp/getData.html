@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<title>Get Data - getData.html</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-icon" />
+		
+		<style>
+			#address{width: 250px}
+			button[type='button'], button[type='reset']{margin-top:6px; }
+		</style>
+	</head>
+	<body>
+		<p> [코딩시 요구사항]<br />
+		getData.html --> 요청 uri: /servletExample/getData<br />
+		method : post방식 / 입력 양식의 이름 및 아이디 (순서대로): dataForm, name, address<br />
+		서블릿 name : GetData 생성</p>
+			
+			
+		<!-- (js 파일 불필요. 하지만 근데 이러면 유효성 검사를 못함 따라서 아래처럼 만들기) -->
+		<!-- <form id="dataForm" method="post" action="/servletExample/getData">
+			<label>이 름 : </label>
+			<input type="text" name="name" id="name" placeholder="이름" required="required" /><br />
+			<label>주 소 : </label>
+			<input type="text" name="address" id="address" placeholder="주소" required="required"/><br />
+			
+			<button type="submit">전송</button>&nbsp;&nbsp;
+			<button type="reset">취소</button>   
+		</form>  -->  
+		
+		
+		<!-- (js 파일 필요) -->
+		<form name="dataForm" id="dataForm">
+			<label>이 름 : </label>
+			<input type="text" name="name" id="name" placeholder="이름 입력" /><br />
+			<label>주 소 : </label>
+			<input type="text" name="address" id="address" placeholder="주소 입력" /><br />
+			
+			<button type="button" id="submitBtn">전송</button>&nbsp;&nbsp;
+			<button type="reset">취소</button>
+		</form>
+		
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script src="../js/getData.js"></script> 
+
+	</body>
+</html>
