@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<title>책정보 - bookInput.html</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-icon" />
+		
+		<style>
+			input[type="text"]{width: 250px;}
+			#regBtn{margin-top:8px; width:320px;}
+		</style>
+	</head>
+	<body>
+		<h4>책 정보 입력</h4>
+
+		<form name="bookForm" id="bookForm">
+			<label>책제목</label>
+			<input type="text" name="title" id="title" class="inputData" />
+			<span class="message"></span>
+			<br />
+			<label>책저자</label>
+			<input type="text" name="author" id="author" class="inputData" />
+			<span class="message"></span>
+			<br />
+			<label>출판사</label>
+			<input type="text" name="publisher" id="publisher" class="inputData" />
+			<span class="message"></span>
+			<br />
+			
+			<button type="button" id="regBtn">등록</button>
+		</form>
+		
+		<script src="/servletExample/js/jquery-3.7.1.min.js"></script>   
+		<script src="/servletExample/js/bookInput.js"></script>  <!-- js문서를 실행하고 그 url을 복붙한 거. 어차피 앞 포트번호는 똑같으니까 url로도 불러올 수 있는것. 이런 식으로 더 많이 쓴다. -->
+	</body>
+</html>

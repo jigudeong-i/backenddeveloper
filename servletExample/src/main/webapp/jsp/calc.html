@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<title>간단한 연산 프로그래밍 - calc.html</title>
+		<link href="../image/icon.png" rel="icon" type="image/x-icon" />
+		<style>
+			hr{width:400px; margin-left:0px;} 
+			input[type="text"]{width:100px;}
+		</style>
+	</head>
+	
+	<body>
+		<h3>계산기</h3>
+		<hr />
+		<!-- 
+			<form name="frm" id="frm" action="/servletExample/calcServlet" method="post"> 
+				...
+				<input type="submit" value="전송" />
+			</form>
+		-->
+		<form name="frm" id="frm">
+			<input type="text" name="num1" id="num1" class="number" /> 
+			<select name="operator" id="operator"> 
+				<option value="+" selected>+</option>  <!-- selected:처음으로 보여지는 옵션 -->
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+			<input type="text" name="num2" id="num2" class="number" />
+			
+			
+			<!-- 서버로 부터 값만 얻어오려면 이 부분을 추가하시오 -->
+			<!-- <label> = </label>
+			<input type="text" name="result" id="result" readonly /> -->
+			<!--  -->
+			
+			
+			<button type="button" id="btnCalc">계산하기</button>
+			<button type="reset">다시입력</button>
+		</form>
+		
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script src="../js/calc.js"></script>
+	</body>
+</html>
+
+
+
+
