@@ -7,15 +7,24 @@
 		<link href="/scriptTag/image/icon.png" rel="icon" type="image/x-icon" />
 	</head>
 	<body>
-		<form id="scoreForm">
+		
+		<!-- <form id="scoreForm">
 			<label>점수 입력(0 ~ 100사이로 입력해 주세요)</label><br />
 			<label>점수: </label>
 			<input type="text" name="score" id="score" maxlength="3" />
 			<button type="submit" id="sendBtn">학점 구하기</button><br />   <!-- 경고창 이쁘게 띄우려면 submit -->
-			
-			<label>학점: </label>
+			<!-- <label>학점: </label>
 			<input type="text" name="grade" id="grade" maxlength="3" />
-			
+		</form>  -->
+		
+		<form id="scoreForm">
+			<label>점수 입력(0 ~ 100사이로 입력해 주세요)</label><br />
+			<label>점수: </label>
+			<input type="text" name="score" id="score" maxlength="3" />
+			<!-- 아래 부분 추가 및 변경 -->
+			<button type="button" id="sendBtn">학점 구하기</button><br />
+			<label>학점: </label>
+			<input type="text" name="result" id="result" readonly /> 
 		</form> 
 		
 		<script src="/scriptTag/js/jquery-3.7.1.min.js"></script>

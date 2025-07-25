@@ -32,4 +32,8 @@
 	</servlet-mapping>
  -->
  
+ 	<listener>
+ 		<listener-class>com.example.listener.DriverCleanupListener</listener-class>
+ 	</listener>
+ 
 </web-app>  <!-- 루트가 webapp이기에 이 안에서 모든 코딩을 해야한다. -->
