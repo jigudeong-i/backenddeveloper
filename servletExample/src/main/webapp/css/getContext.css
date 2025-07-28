@@ -1,0 +1,12 @@
+
+table{
+	border-collapse: collapse; 
+	width:200px
+}
+caption{
+	font-size:14px;
+}
+td{
+	border:1px solid #000; 
+	text-align:center; 
+}

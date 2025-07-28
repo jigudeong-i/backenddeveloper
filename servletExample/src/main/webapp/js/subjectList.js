@@ -12,9 +12,10 @@
 	});
 })();
 
+
 // 공통 함수
-const submitSubjectForm = function(actionUrl){
-	$("#subject")
+const submitSubjectForm = function(formName, actionUrl){
+	$(formName)
 		.attr({
 			"method":"post",
 			"action":actionUrl
@@ -22,13 +23,14 @@ const submitSubjectForm = function(actionUrl){
 		.submit();
 }
 
+
 // "입력완료" 버튼 제어
 $(document).on("click", "#insertBtn", ()=>{
 	if(!chkData("#subjectName", "학과명을 ")) return;
 	
 	const isNew = $("#no").val() === "0";
 	const actionUrl = isNew ? "/servletExample/insert" : "/servletExample/update";
-	submitSubjectForm(actionUrl);
+	submitSubjectForm("#subject",actionUrl);
 })
 
 
@@ -38,7 +40,6 @@ $(document).on("click", "#insertBtn", ()=>{
 $("#resetBtn").on("click", ()=>{
 	$("#subjectName").val("");
 });
-
 
 
 
@@ -93,12 +94,58 @@ $(document).on("click", ".upResetBtn", () => {
 
 
 
+// "삭제" 버튼 제어 (학생 있는 학과 삭제 제어 추가시 이 코드는 주석)
+/*
+$(document).on("click", ".deleteBtn", function(){
+	if(confirm("학과 정보를 삭제하시겠습니까?")){
+		const $row = $(this).closest("tr");
+		const subjectNumber = $row.find("td:eq(1)").text().trim();
+		location.href=`/servletExample/delete?subjectNumber=${subjectNumber}`;
+	}
+});
+*/
 
 
 
+// 학생 있는 학과 삭제 제어
+$(document).on("click", ".deleteBtn", function(){
+	const $row = $(this).closest("tr");
+	const subjectNumber = $row.find("td:eq(1)").text().trim();
+	
+	$.ajax({
+		url: "/servletExample/studentCheck",
+		method: "post",
+		data: { subjectNumber },
+		datatype: "text"
+	}).done(function (data){
+		const studentCount = parseInt(data);
+		
+		if(studentCount>0){
+			alert("소속된 학생이 존재하여 학과 데이터를 삭제할 수 없습니다.");
+		}else{
+			if(confirm("정말로 해당 학과 정보를 삭제하시겠습니까?")){
+				location.href = `/servletExample/delete?subjectNumber=${subjectNumber}`;
+			}
+		}
+	}).fail(function (xhr,textStatus){
+		alert(`[오류] ${textStatus} 발생\n상태 코드: ${xhr.status}`);
+	});
+});
 
 
 
+// "학과명 검색" 버튼 제어
+$("#searchBtn").on("click", ()=>{
+	if(!chkData("#name", "학과명을 ")) return;
+	submitSubjectForm("#search", "/servletExample/search");
+});
+
+
+
+// "전체 검색" 버튼 제어
+$("#searchAllBtn").on("click", ()=>{
+	location.href = "/servletExample/list";
+});
 
 
 

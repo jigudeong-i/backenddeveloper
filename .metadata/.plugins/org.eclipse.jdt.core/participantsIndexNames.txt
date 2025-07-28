@@ -1,4 +1,6 @@
 INDEX VERSION 1.134
+C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1729557997.index
+\servletExample\src\main\java
 C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\839082377.index
 \firstExample2\src\main\java
 C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\47758713.index

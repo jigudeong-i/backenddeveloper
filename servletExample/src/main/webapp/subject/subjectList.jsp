@@ -19,6 +19,15 @@
 		<div class="container">
 			<h3> 테이블 subject 학과 정보 조회 </h3>
 			<hr />
+		
+			<form id="search" >
+				<div class="input-group">
+					<input type="text" class="form-control" name="subjectName" id="name" placeholder="학과명 검색" aria-label="학과명 검색" maxlength="20" />
+					<button class="btn btn-outline-secondary" type="button" id="searchBtn" >학과명 검색</button>
+					<button class="btn btn-outline-secondary" type="button" id="searchAllBtn" >전체 검색</button>
+				</div>
+			</form>
+			
 			<div id="subjectList">
 				<table class="table table-striped">    <!-- 부트스트랩 테이블 양식 불러오기 -->
 					<thead>

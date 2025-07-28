@@ -93,8 +93,6 @@ public class SubjectDAO {
     
     
     
-    
-    
     //레코드 입력
     public boolean subjectInsert(SubjectVO subjectVO) {
     	StringBuilder sql = new StringBuilder();
@@ -118,7 +116,6 @@ public class SubjectDAO {
     
     
     
-    
     //레코드 수정 
     public boolean subjectUpdate(SubjectVO subjectVO) {
     	StringBuilder sql = new StringBuilder();
@@ -137,6 +134,78 @@ public class SubjectDAO {
 	    	//se.printStackTrace(); //오류 발생 시 주석 해제
 	    	return false;
 	    }
+    }
+    
+    
+    
+    //삭제 처리
+    public boolean subjectDelete(SubjectVO subjectVO) { //삭제 성공시 true, 실패시 false 반환 
+    	StringBuilder sql = new StringBuilder();
+    	sql.append("delete from subject where s_num = ?");
+    	
+    	try(Connection conn = getConnection(); //DB연결(Connection)과 SQL 실행객체(PreparedStatement)를 try-with-resources로 자동 close 처리
+    		PreparedStatement pstmt = conn.prepareStatement(sql.toString());){ //conn.prepareStatement: 미리 SQL을 컴파일하고 ?자리에 값을 넣을 수 있게 함. 
+    		
+    		pstmt.setString(1, subjectVO.getSubjectNumber()); //subjectVO.getSubjectNumber(): 과목번호를 문자열로 꺼냄 
+    		
+    		return pstmt.executeUpdate() == 1;  //executeUpdate() SQL 실행 후 영향 받은 행의 수를 반환. 1개의 행이 삭제되었으면 true, 아니면 false 반환
+    	}catch(SQLException se) {
+    		System.err.println("[subjectDelete] SQL 오류: " + se.getMessage());
+    		// se.printStackTrace(); // 오류 발생 시 주석 해제 
+    		return false;
+    	}
+    }
+    
+    
+    
+    
+    //학과에 소속된 학생이 존재하면 학과 삭제 못하게 하기
+    public int studentDataCheck(SubjectVO subjectVO) {
+    	StringBuilder sql = new StringBuilder();
+    	sql.append("SELECT COUNT(sd_num) FROM student ");
+    	sql.append("WHERE s_num = ?");
+    	
+    	int data = 0;
+    	try(Connection con = getConnection();
+    		PreparedStatement pstmt = con.prepareStatement(sql.toString());){
+    		
+    		pstmt.setString(1, subjectVO.getSubjectNumber());
+    		try(ResultSet rs = pstmt.executeQuery()){
+    			if(rs.next()) {
+    				data = rs.getInt(1);
+    			}
+    		}
+    	}catch(SQLException se) {
+    		System.err.println("[studentDataCheck] SQL 오류: " + se.getMessage());
+    		// se.printStackTrace(); 오류 발생 시 주석 해제
+    	}
+    	return data;    			    			    	
+    }
+    
+    
+    public List<SubjectVO> getSubjectSearch(SubjectVO subjectVO) {
+    	List<SubjectVO> list = new ArrayList<>();
+    	
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT no, s_num, s_name FROM subject ");
+        sql.append("WHERE s_name LIKE ? ");
+        sql.append("ORDER BY no");
+
+        try (Connection conn = getConnection();
+        	 PreparedStatement	pstmt = conn.prepareStatement(sql.toString());) {
+  
+            pstmt.setString(1, "%" + subjectVO.getSubjectName() + "%");
+
+            try(ResultSet rs = pstmt.executeQuery()){
+            	while(rs.next()){
+            		list.add(addSubject(rs));
+                }
+            } 
+        }catch(SQLException se) {
+        	System.err.println("[getSubjectSearch] SQL 오류: " + se.getMessage());
+        	//se.printStackTrace(); //오류 발생 시 주석 해제
+        }
+        return list;
     }
 }
 
