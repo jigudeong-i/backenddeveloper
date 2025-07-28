@@ -20,20 +20,16 @@ import javax.servlet.http.HttpServletResponse;
 public class SetCookieValue extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html;charset=utf-8");
-		PrintWriter out = response.getWriter();
 		
 		Date d = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		String now = dateFormat.format(d);
 		
+								// 쿠키는 쌍저장 (key, value)
 		Cookie c1 = new Cookie("connectTime", URLEncoder.encode(now, "utf-8"));
-		c1.setMaxAge(24 * 60 * 60);
-		//c1.setMaxAge(-1);  // -1은 브라우저 종료될 때 쿠키도 삭제.
+		c1.setMaxAge(24 * 60 * 60); // 쿠키 수명은 1일 
+		//c1.setMaxAge(-1);  // 브라우저 종료될 때 쿠키도 삭제.
 		response.addCookie(c1);
 		
 		Cookie c2 = new Cookie("cookieString", URLEncoder.encode("JSP프로그래밍입니다.", "utf-8"));
@@ -44,6 +40,11 @@ public class SetCookieValue extends HttpServlet {
 		Cookie c3 = new Cookie("cookieName", "Youngsu");
 		c3.setMaxAge(24 * 60 * 60);
 		response.addCookie(c3);
+		
+		
+		
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
 		
 		out.println("<!DOCTYPE html><html>");
 	    out.println("<head><meta charset='UTF-8' />");
@@ -57,3 +58,14 @@ public class SetCookieValue extends HttpServlet {
 		out.close();
 	}
 }
+
+
+// 왜 서블렛은 꼭 html 형식으로 출력해야 하는걸까?  
+
+
+
+
+
+
+
+

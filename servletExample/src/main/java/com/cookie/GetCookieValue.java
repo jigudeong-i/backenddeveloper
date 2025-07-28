@@ -16,13 +16,10 @@ import javax.servlet.http.HttpServletResponse;
 public class GetCookieValue extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=utf-8");
-	    PrintWriter out=response.getWriter();
-	    
+	    PrintWriter out = response.getWriter();
+
 		out.println("<!DOCTYPE html><html>");
 	    out.println("<head><meta charset='UTF-8' />");
 	    out.println("<title>Cookie 예제</title>");
@@ -48,3 +45,11 @@ public class GetCookieValue extends HttpServlet {
 	    out.close();
 	}
 }
+
+
+
+
+
+
+
+
