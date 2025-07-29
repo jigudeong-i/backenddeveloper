@@ -14,7 +14,6 @@ public class BookVO {
 		this.publisher = publisher;
 	}
 
-
 	public String getTitle() {
 		return title;
 	}

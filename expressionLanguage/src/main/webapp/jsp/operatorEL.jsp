@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <% int n=10; 
+		request.setAttribute("n", n); %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,9 +19,9 @@
 		  <li>\${2 + 5} = ${2 + 5}</li>
 		  <li>\${4 / 5} = ${4 / 5}</li>
 		  
-		  <li>\${7 mod 5} = ${7 mod 5}</li>
-		  <li>\${2 &lt; 3} = ${2 < 3}</li>
-		  <li>\${3.1 le 3.2} = ${3.1 le 3.2}</li>
+		  <li>\${7 mod 5} = ${7 mod 5}</li> <!-- 나머지 -->
+		  <li>\${2 &lt; 3} = ${2 lt 3}</li> <!-- HTML에서 '<' 기호는 태그 시작 기호와 같기에 그대로 쓰면 브라우저가 오해할 수 있다. 그래서 HTML에선 이렇게 써야함. -->
+		  <li>\${3.1 le 3.2} = ${3.1 <= 3.2}</li> 
 		  <li>\${3 lt 5 and 8 gt 10} = ${3 lt 5 and 8 gt 10}</li>
 		  <li>\${ header["host"] } = ${ header["host"] }</li><%-- header는 표현언어 내장객체명 --%>
 		</ul>
@@ -38,3 +40,11 @@
 		<p>\${empty paramValues.msg} = ${empty paramValues.msg}</p>
 	</body>
 </html>
+
+
+
+
+
+
+
+
