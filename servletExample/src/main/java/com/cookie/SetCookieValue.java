@@ -60,7 +60,7 @@ public class SetCookieValue extends HttpServlet {
 }
 
 
-// 왜 서블렛은 꼭 html 형식으로 출력해야 하는걸까?  
+// 왜 서블릿은 꼭 html 형식으로 출력해야 하는걸까?  
 
 
 
