@@ -10,9 +10,9 @@
 	</head>
 	<body>
 		<h3>JSTL Core Tag: catch</h3>
-		
+
 		<c:catch var="errMessage">
-			<%--= 2/0 --%>
+			<%-- =2/0 --%>
 			<%=request.getParameter("userName").toLowerCase() %>
 		</c:catch>
 		
@@ -25,3 +25,12 @@
 		</p>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
