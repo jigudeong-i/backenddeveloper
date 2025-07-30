@@ -162,7 +162,11 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
+<<<<<<< HEAD
+      <Context docBase="C:\backenddeveloper\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\backenddeveloper\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\firstExample" path="/firstExample" reloadable="true" source="org.eclipse.jst.jee.server:firstExample"/><Context docBase="C:\backenddeveloper\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\servletExample" path="/servletExample" reloadable="true" source="org.eclipse.jst.jee.server:servletExample"/><Context docBase="C:\backenddeveloper\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\scriptTag" path="/scriptTag" reloadable="true" source="org.eclipse.jst.jee.server:scriptTag"/></Host>
+=======
       <Context docBase="C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\firstExample" path="/firstExample" reloadable="true" source="org.eclipse.jst.jee.server:firstExample"/><Context docBase="C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\servletExample" path="/servletExample" reloadable="true" source="org.eclipse.jst.jee.server:servletExample"/><Context docBase="C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\scriptTag" path="/scriptTag" reloadable="true" source="org.eclipse.jst.jee.server:scriptTag"/><Context docBase="C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\expressionLanguage" path="/expressionLanguage" reloadable="true" source="org.eclipse.jst.jee.server:expressionLanguage"/><Context docBase="C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\webProject" path="/webProject" reloadable="true" source="org.eclipse.jst.jee.server:webProject"/></Host>
+>>>>>>> 6727428e71f7a19e1b87e83c432806ed0e4ca353
     </Engine>
   </Service>
 </Server>
