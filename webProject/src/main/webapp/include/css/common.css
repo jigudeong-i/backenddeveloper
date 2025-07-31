@@ -1,0 +1,10 @@
+
+/* 공통부분 */
+
+textarea{
+	resize: none;
+}
+
+.table-height{
+	height: 200px;
+}

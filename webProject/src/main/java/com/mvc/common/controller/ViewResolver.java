@@ -15,6 +15,11 @@ public class ViewResolver {
 	// viewName = /board/getBoardList이면 prefix = /WEB-INF , suffix = .jsp
 	public String getView(String viewName) {
 		return prefix + viewName + suffix; // /WEB-INF/board/getBoardList.jsp를 반환.
+	
+											//dispatcher의 
+											//viewResolver.setPrefix("/WEB-INF");
+											//viewResolver.setSuffix(".jsp");
+											// 위 두 매서드로 인해 뒤에 WEB-INF.jsp 를 붙여줌 
 	}
 	
 }

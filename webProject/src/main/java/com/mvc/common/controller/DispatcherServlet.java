@@ -12,12 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 public class DispatcherServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	private HandlerMapping handlerMapping;
+	private HandlerMapping handlerMapping; // HandlerMapping 클래스 만들었었다.  
 	private ViewResolver viewResolver;
 	
 	public void init() throws SecurityException{
 		handlerMapping = new HandlerMapping();
 		viewResolver = new ViewResolver();
+
 		viewResolver.setPrefix("/WEB-INF");
 		viewResolver.setSuffix(".jsp");
 	}
@@ -26,7 +27,6 @@ public class DispatcherServlet extends HttpServlet {
 		process(request, response);
 	}
 
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		process(request, response);
 	}
@@ -34,7 +34,7 @@ public class DispatcherServlet extends HttpServlet {
 	private void process(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		// 1.클라이언트의 요청 path 정보를 추출한다.
 		// 요청 URL: http://localhost:8080/board/getBoardList.do
-		String path = request.getRequestURI();	// /board/getBoardList.do 이것만 path에 담는다. 이게 식별자가 되는 것. 
+		String path = request.getRequestURI();	// 버튼 클릭후 주소가 http://localhost:8080/board/getBoardList.do 즉, /board/getBoardList.do를 path에 담는다. 이게 식별자가 되는 것. 
 		
 		// 2.HandlerMapping을 통해 path에 해당하는 Controller를 검색한다.
 		Controller ctrl = handlerMapping.getController(path); 
