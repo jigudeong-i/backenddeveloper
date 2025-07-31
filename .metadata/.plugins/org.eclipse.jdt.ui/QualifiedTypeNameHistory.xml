@@ -21,18 +21,10 @@
     <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
     <fullyQualifiedTypeName name="javax.swing.BoundedRangeModel"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.net.http.HttpRequest"/>
     <fullyQualifiedTypeName name="com.mvc.board.controller.Controller"/>
-    <fullyQualifiedTypeName name="com.mvc.board.service.BoardService"/>
     <fullyQualifiedTypeName name="com.mvc.board.dao.BoardDAO"/>
-    <fullyQualifiedTypeName name="com.mvc.board.service.BoardServiceImpl"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.mvc.board.vo.BoardVO"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.mvc.board.controller.GetBoardListController"/>
@@ -45,4 +37,13 @@
     <fullyQualifiedTypeName name="com.mvc.common.controller.ViewResolver"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.sql.SQLSyntaxErrorException"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="com.mvc.board.service.BoardService"/>
+    <fullyQualifiedTypeName name="com.mvc.board.service.BoardServiceImpl"/>
+    <fullyQualifiedTypeName name="com.mvc.board.vo.BoardVO"/>
 </qualifiedTypeNameHistroy>
