@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.134+C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse.jdt.core
 1594352127.index
 2391012411.index
@@ -14,3 +15,13 @@ INDEX VERSION 1.134+C:\backenddeveloper\JSPCoding\.metadata\.plugins\org.eclipse
 3283891942.index
 2081273801.index
 3996830831.index
+=======
+INDEX VERSION 1.134+C:\backenddeveloper\.metadata\.plugins\org.eclipse.jdt.core
+1525560861.index
+4109252047.index
+1259597746.index
+2391012411.index
+2143541838.index
+1865797976.index
+1594352127.index
+>>>>>>> 48438ecd9fbe5b6c21f4a1e797ed610fa6697f76
