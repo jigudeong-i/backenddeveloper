@@ -8,22 +8,23 @@ import com.mvc.board.service.BoardServiceImpl;
 import com.mvc.board.vo.BoardVO;
 import com.mvc.common.controller.Controller;
 
-public class DetailboardController implements Controller {
+public class PasswdCheckController implements Controller {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		String num = request.getParameter("num");
+		String passwd = request.getParameter("passwd");
+		
 		BoardVO boardVO = new BoardVO();
 		boardVO.setNum(Integer.parseInt(num));
+		boardVO.setPasswd(passwd);
 		
 		BoardService service = BoardServiceImpl.getInstance();
-		service.readcntUpdate(boardVO);
+		int result = service.boardPassCheck(boardVO);
 		
-		BoardVO board = service.boardDetail(boardVO);
+		request.setAttribute("resultData", result);
 		
-		request.setAttribute("detail", board);
-		
-		return "/board/detailBoard";
+		return "/common/resultData";
 	}
-	
+
 }

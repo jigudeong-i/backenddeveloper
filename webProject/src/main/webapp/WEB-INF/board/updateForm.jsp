@@ -5,7 +5,7 @@
 	
 <body>
 	<div class="container">
-		<div class="text-center"><h3>게시판 상세 화면</h3></div>
+		<div class="text-center"><h3>게시판 수정 화면</h3></div>
 		
 		<form id="f_updateForm">
 			<div class="text-center">

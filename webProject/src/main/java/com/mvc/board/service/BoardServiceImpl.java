@@ -48,5 +48,29 @@ public class BoardServiceImpl implements BoardService {
 	public BoardVO updateForm(BoardVO boardVO) {
 		BoardVO board = dao.boardDetail(boardVO);
 		return board;
+	}	
+	@Override
+	public int boardUpdate(BoardVO boardVO) {
+		int result = dao.boardUpdate(boardVO);
+		return result;
 	}
+	
+	@Override
+	public int boardDelete(BoardVO boardVO) {
+		int result = dao.boardDelete(boardVO);
+		return result;
+	}
+	
+	@Override
+	public int boardPassCheck(BoardVO boardVO) {
+		int result = dao.boardPasswdCheck(boardVO);
+		return result;
+	}
+	
+	@Override
+	public List<BoardVO> boardList(BoardVO boardVO){
+		List<BoardVO> list = dao.boardList(boardVO);
+		return list;
+	}
+	
 }

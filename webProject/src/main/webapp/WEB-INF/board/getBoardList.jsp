@@ -9,6 +9,26 @@
 		
 		<div id="boardList">
 			<table summary="게시판 리스트" class="table">
+				<form id="f_search" name="f_search">
+					<div class="row g-2 align-items-center">
+						<div class="col-auto">
+							<label for="search">검색조건</label>
+						</div>
+						<div class="col-auto">
+							<select id="search" name="search" class="form-select form-select-sm">
+								<option value="all">전체조회</option>
+								<option value="title">제목</option>
+								<option value="author">작성자</option>
+							</select>
+						</div>
+						<div class="col-auto">
+							<input type="text" name="keyword" id="keyword" class="form-control form-control-sm" />
+						</div>
+						<div class="col-auto">
+							<button type="button" id="searchData" class="btn btn-primary btn-sm">검색</button>
+						</div>
+					</div>
+				</form>
 				<thead>
 					<tr class="text-center">
 						<th class="col-md-1">번호</th> <!-- 기본 12개로 잡음. -->
@@ -48,7 +68,15 @@
 			<button type="button" id="writeForm" class="btn btn-primary btn-sm">글작성</button>
 		</div>
 	</div>
+	
 	<%@ include file="/WEB-INF/common/footer.jsp" %>
 	<script src="/include/js/getBoardList.js"></script>
 	
+	<script>
+		//검색후 검색 대상과 검색 단어 출력 - 검색 여부는 keyword의 값 존재여부로 제어
+		if('${param.keyword}'!=""){
+			$("#keyword").val('${param.keyword}');
+			$("#search").val('${param.search}');
+		}
+	</script>
 </body>
