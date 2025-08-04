@@ -14,7 +14,7 @@ public class BoardDAO {
 	private static BoardDAO instance = null;
 	
 	public static BoardDAO getInstance() { //BoardDAO의 인스턴스는 BoardDAO.getInstance()
-		if(instance==null) {
+		if(instance == null) {
 			instance = new BoardDAO();
 		}
 		return instance;
@@ -22,7 +22,7 @@ public class BoardDAO {
 	
 	private BoardDAO() {} // 다른 클래스 new BoardDAO 못하게 
 	
-	//vo 사용을 메서드에 담음. 아래 메서드들에서 어떻게 사용되는지 보기. 메서드마다 일일히 다 쓰는게 귀찮아서 메서드로 만들어버림.    
+	//vo 사용을 메서드에 담음. 이 메서드가 아래 메서드들에서 어떻게 사용되는지 보기. 메서드마다 일일히 다 쓰는게 귀찮아서 메서드로 만들어버림.    
 	private BoardVO addBoard(ResultSet rs) throws SQLException{
 		BoardVO boardVO = new BoardVO();
 		boardVO.setNum(rs.getInt("num"));
